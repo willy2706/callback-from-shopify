@@ -10,11 +10,11 @@ app.post('/rate', (req, res) => {
     console.log(req)
     var rates = []
     var obj = {
-        "service_name": "canadapost-overnight",
-        "service_code": "ON",
-        "total_price": "1295",
-        "description": "This is the fastest option by far",
-        "currency": "CAD",
+        "service_name": "Powered By Shipper",
+        "service_code": "SHIPPER",
+        "total_price": "10000",
+        "description": "Powered by shipper Description",
+        "currency": "IDR",
         "min_delivery_date": "2013-04-12 14:48:45 -0400",
         "max_delivery_date": "2013-04-12 14:48:45 -0400"
     }
