@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
 
 app.post('/rate', jsonParser, (req, res) => {
     console.log(JSON.stringify(req.body))
+    console.log(JSON.stringify(req.headers))
     var rates = []
     var obj = {
         "service_name": "Powered By Shipper",
