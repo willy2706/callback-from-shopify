@@ -27,6 +27,6 @@ app.post('/rate', (req, res) => {
     res.send(response)
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
