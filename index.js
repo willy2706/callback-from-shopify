@@ -1,13 +1,16 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const bodyParser = require('body-parser');
 
+const jsonParser = bodyParser.json();
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.post('/rate', (req, res) => {
-    console.log(req)
+
+app.post('/rate', jsonParser, (req, res) => {
+    console.log(req.body)
     var rates = []
     var obj = {
         "service_name": "Powered By Shipper",
@@ -27,6 +30,6 @@ app.post('/rate', (req, res) => {
     res.send(response)
 })
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
